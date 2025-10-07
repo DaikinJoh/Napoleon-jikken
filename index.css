@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+.first-view {
+  height: calc(100vh - 110px);
+  background-image: url(..//images/france\ flag.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.first-view-text {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-bottom: 80px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.first-view-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 56px;
+  line-height: 72px;
+}
+
+.first-view-text p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.lead {
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.lead p {
+  line-height: 2;
+  text-align: center;
+}
+
+.link-button-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.link-button {
+  background-color: #f4dd64;
+  display: inline-block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.link-button:hover {
+  background-color: #d8b500;
+}
+
+ .recommended{
+            background-color: #f8f8f8;
+            padding-top: 45px;
+            padding-bottom: 55px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .recommended h2{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+
+        .recommended h2::after{
+            content:'';
+            display: block;
+            width: 36px;
+            height: 3px;
+            background-color: #000;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8px;
+        }
+
+        .item-list{
+            display: flex;
+            padding-top: 40px;
+            padding-bottom: 10px;
+            padding-left: 60px;
+            padding-right: 60px;
+            overflow-x: auto; /* 横スクロール */
+            list-style: none; /* リストの点を削除 */
+            margin: 0;
+            padding-bottom: 40px; /* スクロール下の余白を確保 */
+        }
+
+        .item-list li{
+            flex-shrink: 0;
+            width:260px;
+            margin-left: 75px;
+            box-sizing: border-box;
+
+            /* 見栄えとホバー効果のための追加（内容を変えないように元のスタイルを上書き/追加） */
+            background-color: #fff; 
+            padding: 15px; 
+            border-radius: 12px; 
+            
+            /* 【重要】ホバー時に要素が浮かび上がる機能のための追加 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションを滑らかに */
+            cursor: pointer; /* マウスカーソルをポインターに変更 */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 初期状態のわずかな影 */
+        }
+
+        /* 【重要】ホバー時のスタイル */
+        .item-list li:hover{
+            transform: translateY(-10px) scale(1.02); /* 上に移動し、わずかに拡大して浮き上がりを強調 */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* 影を濃くして、浮き上がりを強調 */
+        }
+
+        .item-list li:first-child{
+            margin-left: 0;
+        }
+        
+        /* 以下、元のCSSのまま */
+        .item-list dl{
+            margin-top: 20px;
+        }
+
+        .item-list dt{
+            font-weight: bold;
+        }
+
+        .item-list dd{
+            font-size: 13px;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+
+        .item-list .price{
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* 画像スタイル調整 */
+        .item-list li img {
+            display: block;
+            width: 100%; 
+            height: auto; 
+            border-radius: 8px;
+        }
+
+@media (max-width: 800px) {
+  .first-view {
+    height: calc(100vh - 50px);
+    background-image: url(../images/index/bg-main-sp.jpg);
+    align-items: flex-start;
+  }
+
+  .first-view-text {
+    padding-top: 60px;
+    padding-left: 20px;
+  }
+
+  .first-view-text h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .first-view-text p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .lead {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .lead p {
+    text-align: left;
+  }
+
+  .item-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item-list li {
+    width: 220px;
+    margin-left: 30px;
+  }
+}
